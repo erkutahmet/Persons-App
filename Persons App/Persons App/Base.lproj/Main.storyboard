@@ -1,24 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mev-AQ-VCX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Persons-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomePage" customModule="Persons_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-LB-6aO">
+                                <rect key="frame" x="0.0" y="155" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l6Z-w7-NKo"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBc-cx-4Mm">
+                                <rect key="frame" x="162.66666666666666" y="408.66666666666669" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Detail"/>
+                                <connections>
+                                    <action selector="detailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hS-fi-1zD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zvN-LB-6aO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UnH-Zo-aar"/>
+                            <constraint firstItem="zvN-LB-6aO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lY9-dY-FOa"/>
+                            <constraint firstItem="zvN-LB-6aO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lvO-um-fcn"/>
+                            <constraint firstItem="DBc-cx-4Mm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tKK-hg-oRI"/>
+                            <constraint firstItem="DBc-cx-4Mm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xpg-GY-yIw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Persons" id="RnN-3e-Xdc">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="PNK-f8-LV2">
+                            <connections>
+                                <segue destination="GXm-Fe-TQ0" kind="show" id="teP-Yu-1Lh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="zHI-hp-2CP" kind="show" identifier="toInfo" id="Xhn-TP-Vfc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1043.5114503816794" y="-2.1126760563380285"/>
+        </scene>
+        <!--Register a Person-->
+        <scene sceneID="bw9-oc-KEM">
+            <objects>
+                <viewController id="GXm-Fe-TQ0" customClass="PersonRegistration" customModule="Persons_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5HC-UB-1VK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7H-wz-Sh5">
+                                <rect key="frame" x="50" y="205" width="293" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDo-EK-X64">
+                                <rect key="frame" x="50" y="293.33333333333331" width="293" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-Y0-zE6">
+                                <rect key="frame" x="145.66666666666666" y="381.66666666666669" width="102" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SAVE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveClicked:" destination="GXm-Fe-TQ0" eventType="touchUpInside" id="tgN-Ck-dEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J6B-WR-THp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QN8-Y0-zE6" firstAttribute="centerX" secondItem="5HC-UB-1VK" secondAttribute="centerX" id="Bfp-Xk-dh6"/>
+                            <constraint firstItem="bDo-EK-X64" firstAttribute="leading" secondItem="J6B-WR-THp" secondAttribute="leading" constant="50" id="DLO-wn-aHT"/>
+                            <constraint firstItem="bDo-EK-X64" firstAttribute="top" secondItem="q7H-wz-Sh5" secondAttribute="bottom" constant="50" id="IU3-Gi-hlP"/>
+                            <constraint firstItem="J6B-WR-THp" firstAttribute="trailing" secondItem="q7H-wz-Sh5" secondAttribute="trailing" constant="50" id="fm1-be-0p0"/>
+                            <constraint firstItem="q7H-wz-Sh5" firstAttribute="top" secondItem="J6B-WR-THp" secondAttribute="top" constant="50" id="hHu-FY-6A5"/>
+                            <constraint firstItem="J6B-WR-THp" firstAttribute="trailing" secondItem="bDo-EK-X64" secondAttribute="trailing" constant="50" id="k6i-na-zb2"/>
+                            <constraint firstItem="q7H-wz-Sh5" firstAttribute="leading" secondItem="J6B-WR-THp" secondAttribute="leading" constant="50" id="qkz-sA-dye"/>
+                            <constraint firstItem="QN8-Y0-zE6" firstAttribute="top" secondItem="bDo-EK-X64" secondAttribute="bottom" constant="50" id="xUf-dJ-GDb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register a Person" id="H4b-5z-MAp"/>
+                    <connections>
+                        <outlet property="personNameTextField" destination="q7H-wz-Sh5" id="iDa-K5-4Jc"/>
+                        <outlet property="personPhoneTextField" destination="bDo-EK-X64" id="w72-yb-uCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38y-gO-oAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885" y="-309"/>
+        </scene>
+        <!--Person Info-->
+        <scene sceneID="osL-3h-lJX">
+            <objects>
+                <viewController id="zHI-hp-2CP" customClass="PersonInfo" customModule="Persons_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exA-03-Fqy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSs-Tk-c8p">
+                                <rect key="frame" x="50" y="205" width="293" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIa-hh-z89">
+                                <rect key="frame" x="50" y="293.33333333333331" width="293" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcW-lE-hH3">
+                                <rect key="frame" x="124.66666666666667" y="381.66666666666669" width="143.66666666666663" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UPDATE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveClicked:" destination="GXm-Fe-TQ0" eventType="touchUpInside" id="xqb-db-r82"/>
+                                    <action selector="updateClicked:" destination="zHI-hp-2CP" eventType="touchUpInside" id="t4S-La-FzT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pna-Ic-omj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sSs-Tk-c8p" firstAttribute="top" secondItem="pna-Ic-omj" secondAttribute="top" constant="50" id="1PF-O8-6ob"/>
+                            <constraint firstItem="pna-Ic-omj" firstAttribute="trailing" secondItem="sSs-Tk-c8p" secondAttribute="trailing" constant="50" id="Bnr-kO-a2j"/>
+                            <constraint firstItem="zcW-lE-hH3" firstAttribute="centerX" secondItem="exA-03-Fqy" secondAttribute="centerX" id="G7R-C3-mId"/>
+                            <constraint firstItem="zcW-lE-hH3" firstAttribute="top" secondItem="LIa-hh-z89" secondAttribute="bottom" constant="50" id="HGc-ZI-iYU"/>
+                            <constraint firstItem="LIa-hh-z89" firstAttribute="top" secondItem="sSs-Tk-c8p" secondAttribute="bottom" constant="50" id="KJA-nS-P8L"/>
+                            <constraint firstItem="LIa-hh-z89" firstAttribute="leading" secondItem="pna-Ic-omj" secondAttribute="leading" constant="50" id="db2-fA-kkT"/>
+                            <constraint firstItem="sSs-Tk-c8p" firstAttribute="leading" secondItem="pna-Ic-omj" secondAttribute="leading" constant="50" id="hSW-1c-Nx6"/>
+                            <constraint firstItem="pna-Ic-omj" firstAttribute="trailing" secondItem="LIa-hh-z89" secondAttribute="trailing" constant="50" id="nZd-ht-yfp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person Info" id="0Zp-4B-Xcc"/>
+                    <connections>
+                        <outlet property="personNameTextField" destination="sSs-Tk-c8p" id="PBj-RT-v11"/>
+                        <outlet property="personPhoneTextField" destination="LIa-hh-z89" id="brr-cV-m79"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlj-yJ-F6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885" y="355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XUW-A9-eIG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mev-AQ-VCX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="geT-AK-qoD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P4b-EK-ez3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQa-UO-Gdo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
