@@ -9,7 +9,6 @@ import UIKit
 
 class PersonRegistration: UIViewController {
 
-    
     @IBOutlet weak var personNameTextField: UITextField!
     @IBOutlet weak var personPhoneTextField: UITextField!
     
@@ -21,6 +20,7 @@ class PersonRegistration: UIViewController {
         if let personName = personNameTextField.text, let personPhone = personPhoneTextField.text {
             save(person_name: personName, person_phone: personPhone)
         }
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func save(person_name: String, person_phone: String){

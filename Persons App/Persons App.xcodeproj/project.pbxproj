@@ -16,6 +16,7 @@
 		DCFDEE942ADB2A1C0070BD43 /* PersonRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE932ADB2A1C0070BD43 /* PersonRegistration.swift */; };
 		DCFDEE962ADB2A260070BD43 /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE952ADB2A260070BD43 /* PersonInfo.swift */; };
 		DCFDEE982ADB2EBE0070BD43 /* Persons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE972ADB2EBE0070BD43 /* Persons.swift */; };
+		DCFDEE9C2ADB38420070BD43 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE9B2ADB38420070BD43 /* PersonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DCFDEE932ADB2A1C0070BD43 /* PersonRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistration.swift; sourceTree = "<group>"; };
 		DCFDEE952ADB2A260070BD43 /* PersonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
 		DCFDEE972ADB2EBE0070BD43 /* Persons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persons.swift; sourceTree = "<group>"; };
+		DCFDEE9B2ADB38420070BD43 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		DCFDEE902ADB29CF0070BD43 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DCFDEE9A2ADB38270070BD43 /* TableView */,
 				DCFDEE922ADB29E00070BD43 /* Views */,
 			);
 			path = UI;
@@ -106,6 +109,14 @@
 				DCFDEE952ADB2A260070BD43 /* PersonInfo.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DCFDEE9A2ADB38270070BD43 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DCFDEE9B2ADB38420070BD43 /* PersonCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				DCFDEE7C2ADB29690070BD43 /* AppDelegate.swift in Sources */,
 				DCFDEE942ADB2A1C0070BD43 /* PersonRegistration.swift in Sources */,
 				DCFDEE7E2ADB29690070BD43 /* SceneDelegate.swift in Sources */,
+				DCFDEE9C2ADB38420070BD43 /* PersonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

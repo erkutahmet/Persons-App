@@ -28,9 +28,11 @@ class PersonInfo: UIViewController {
         if let personName = personNameTextField.text, let personPhone = personPhoneTextField.text, let p = person {
             update(person_id: p.person_id!, person_name: personName, person_phone: personPhone)
         }
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func update(person_id: Int, person_name: String, person_phone: String){
+        
         print("Save Person: \(person_id) - \(person_name) - \(person_phone)")
     }
 }
