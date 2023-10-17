@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCA76CF72ADE02B800E9BF4B /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CF62ADE02B800E9BF4B /* RxBlocking */; };
+		DCA76CF92ADE02B800E9BF4B /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CF82ADE02B800E9BF4B /* RxBlocking-Dynamic */; };
+		DCA76CFB2ADE02B800E9BF4B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CFA2ADE02B800E9BF4B /* RxCocoa */; };
+		DCA76CFD2ADE02B800E9BF4B /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CFC2ADE02B800E9BF4B /* RxCocoa-Dynamic */; };
+		DCA76CFF2ADE02B800E9BF4B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CFE2ADE02B800E9BF4B /* RxRelay */; };
+		DCA76D022ADE031100E9BF4B /* PersonsDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA76D012ADE031100E9BF4B /* PersonsDaoRepository.swift */; };
+		DCA76D052ADE033500E9BF4B /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA76D042ADE033500E9BF4B /* HomePageViewModel.swift */; };
+		DCA76D072ADE034D00E9BF4B /* RegisterPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA76D062ADE034D00E9BF4B /* RegisterPersonViewModel.swift */; };
+		DCA76D092ADE035C00E9BF4B /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA76D082ADE035C00E9BF4B /* PersonDetailViewModel.swift */; };
 		DCFDEE7C2ADB29690070BD43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE7B2ADB29690070BD43 /* AppDelegate.swift */; };
 		DCFDEE7E2ADB29690070BD43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE7D2ADB29690070BD43 /* SceneDelegate.swift */; };
 		DCFDEE802ADB29690070BD43 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDEE7F2ADB29690070BD43 /* HomePage.swift */; };
@@ -20,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCA76D012ADE031100E9BF4B /* PersonsDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDaoRepository.swift; sourceTree = "<group>"; };
+		DCA76D042ADE033500E9BF4B /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		DCA76D062ADE034D00E9BF4B /* RegisterPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonViewModel.swift; sourceTree = "<group>"; };
+		DCA76D082ADE035C00E9BF4B /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
 		DCFDEE782ADB29690070BD43 /* Persons App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persons App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFDEE7B2ADB29690070BD43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFDEE7D2ADB29690070BD43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +52,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA76CFF2ADE02B800E9BF4B /* RxRelay in Frameworks */,
+				DCA76CFD2ADE02B800E9BF4B /* RxCocoa-Dynamic in Frameworks */,
+				DCA76CFB2ADE02B800E9BF4B /* RxCocoa in Frameworks */,
+				DCA76CF72ADE02B800E9BF4B /* RxBlocking in Frameworks */,
+				DCA76CF92ADE02B800E9BF4B /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCA76D002ADE02E600E9BF4B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DCA76D012ADE031100E9BF4B /* PersonsDaoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DCA76D032ADE032700E9BF4B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DCA76D042ADE033500E9BF4B /* HomePageViewModel.swift */,
+				DCA76D062ADE034D00E9BF4B /* RegisterPersonViewModel.swift */,
+				DCA76D082ADE035C00E9BF4B /* PersonDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DCFDEE6F2ADB29690070BD43 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +115,7 @@
 		DCFDEE8F2ADB29C80070BD43 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DCA76D002ADE02E600E9BF4B /* Repository */,
 				DCFDEE912ADB29D90070BD43 /* Entity */,
 			);
 			path = Data;
@@ -87,6 +124,7 @@
 		DCFDEE902ADB29CF0070BD43 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DCA76D032ADE032700E9BF4B /* ViewModel */,
 				DCFDEE9A2ADB38270070BD43 /* TableView */,
 				DCFDEE922ADB29E00070BD43 /* Views */,
 			);
@@ -135,6 +173,13 @@
 			dependencies = (
 			);
 			name = "Persons App";
+			packageProductDependencies = (
+				DCA76CF62ADE02B800E9BF4B /* RxBlocking */,
+				DCA76CF82ADE02B800E9BF4B /* RxBlocking-Dynamic */,
+				DCA76CFA2ADE02B800E9BF4B /* RxCocoa */,
+				DCA76CFC2ADE02B800E9BF4B /* RxCocoa-Dynamic */,
+				DCA76CFE2ADE02B800E9BF4B /* RxRelay */,
+			);
 			productName = "Persons App";
 			productReference = DCFDEE782ADB29690070BD43 /* Persons App.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +208,9 @@
 				Base,
 			);
 			mainGroup = DCFDEE6F2ADB29690070BD43;
+			packageReferences = (
+				DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = DCFDEE792ADB29690070BD43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,7 +240,11 @@
 			files = (
 				DCFDEE982ADB2EBE0070BD43 /* Persons.swift in Sources */,
 				DCFDEE962ADB2A260070BD43 /* PersonInfo.swift in Sources */,
+				DCA76D052ADE033500E9BF4B /* HomePageViewModel.swift in Sources */,
 				DCFDEE802ADB29690070BD43 /* HomePage.swift in Sources */,
+				DCA76D072ADE034D00E9BF4B /* RegisterPersonViewModel.swift in Sources */,
+				DCA76D092ADE035C00E9BF4B /* PersonDetailViewModel.swift in Sources */,
+				DCA76D022ADE031100E9BF4B /* PersonsDaoRepository.swift in Sources */,
 				DCFDEE7C2ADB29690070BD43 /* AppDelegate.swift in Sources */,
 				DCFDEE942ADB2A1C0070BD43 /* PersonRegistration.swift in Sources */,
 				DCFDEE7E2ADB29690070BD43 /* SceneDelegate.swift in Sources */,
@@ -419,6 +471,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCA76CF62ADE02B800E9BF4B /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		DCA76CF82ADE02B800E9BF4B /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		DCA76CFA2ADE02B800E9BF4B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DCA76CFC2ADE02B800E9BF4B /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		DCA76CFE2ADE02B800E9BF4B /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA76CF52ADE02B800E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCFDEE702ADB29690070BD43 /* Project object */;
 }

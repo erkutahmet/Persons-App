@@ -13,21 +13,19 @@ class HomePage: UIViewController {
     @IBOutlet weak var personsTableView: UITableView!
     
     var personsList = [Persons]()
+    let homePageVM = HomePageViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        setSomePersons()
+        setPersonList()
     }
     
-    private func setSomePersons() {
-        let p1 = Persons(person_id: 1, person_name: "Erkut", person_phone: "1111111")
-        let p2 = Persons(person_id: 2, person_name: "Zeynep", person_phone: "2222222")
-        let p3 = Persons(person_id: 3, person_name: "Kübra", person_phone: "3333333")
-        
-        personsList.append(p1)
-        personsList.append(p2)
-        personsList.append(p3)
+    private func setPersonList() {
+        _ = homePageVM.personsList.subscribe(onNext: { list in
+            self.personsList = list
+            self.personsTableView.reloadData()
+        })
     }
     
     private func setUpUI() {
@@ -37,13 +35,13 @@ class HomePage: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        personsTableView.reloadData()
+        homePageVM.reloadPersons()
     }
 }
 
 extension HomePage: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Search: \(searchText)")
+        homePageVM.searchTextDidChange(searchText: searchText)
     }
 }
 
@@ -84,7 +82,7 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(cancelAction)
             
             let okayAction = UIAlertAction(title: "Okay", style: .destructive) { action in
-                print("Delete Person: \(person.person_id!)")
+                self.homePageVM.personDelete(person_id: person.person_id!)
             }
             alert.addAction(okayAction)
             

@@ -12,19 +12,16 @@ class PersonRegistration: UIViewController {
     @IBOutlet weak var personNameTextField: UITextField!
     @IBOutlet weak var personPhoneTextField: UITextField!
     
+    let registerPersonVM = RegisterPersonViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func saveClicked(_ sender: Any) {
         if let personName = personNameTextField.text, let personPhone = personPhoneTextField.text {
-            save(person_name: personName, person_phone: personPhone)
+            registerPersonVM.personRegister(person_name: personName, person_phone: personPhone)
         }
         navigationController?.popToRootViewController(animated: true)
     }
-    
-    func save(person_name: String, person_phone: String){
-        print("Save Person: \(person_name) - \(person_phone)")
-    }
-    
 }
