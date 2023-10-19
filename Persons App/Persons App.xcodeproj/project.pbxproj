@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC25F0212AE1EC7D00FBEBFE /* guide.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DC25F0202AE1EC7D00FBEBFE /* guide.sqlite */; };
 		DC5E0F1E2AE09D2C001B92B5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5E0F132AE09D2B001B92B5 /* FMResultSet.m */; };
 		DC5E0F1F2AE09D2C001B92B5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5E0F142AE09D2B001B92B5 /* FMDatabasePool.m */; };
 		DC5E0F202AE09D2C001B92B5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5E0F162AE09D2B001B92B5 /* FMDatabaseQueue.m */; };
 		DC5E0F212AE09D2C001B92B5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5E0F172AE09D2B001B92B5 /* FMDatabaseAdditions.m */; };
 		DC5E0F222AE09D2C001B92B5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5E0F192AE09D2B001B92B5 /* FMDatabase.m */; };
-		DC5E0F242AE09D7D001B92B5 /* Guide.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DC5E0F232AE09D7D001B92B5 /* Guide.sqlite */; };
 		DCA76CF72ADE02B800E9BF4B /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CF62ADE02B800E9BF4B /* RxBlocking */; };
 		DCA76CF92ADE02B800E9BF4B /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CF82ADE02B800E9BF4B /* RxBlocking-Dynamic */; };
 		DCA76CFB2ADE02B800E9BF4B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CFA2ADE02B800E9BF4B /* RxCocoa */; };
@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC25F0202AE1EC7D00FBEBFE /* guide.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = guide.sqlite; sourceTree = "<group>"; };
 		DC5E0F112AE09CCA001B92B5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DC5E0F122AE09D2B001B92B5 /* Persons App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Persons App-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC5E0F132AE09D2B001B92B5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		DC5E0F1B2AE09D2B001B92B5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		DC5E0F1C2AE09D2B001B92B5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		DC5E0F1D2AE09D2C001B92B5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		DC5E0F232AE09D7D001B92B5 /* Guide.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.sqlite; sourceTree = "<group>"; };
 		DCA76D012ADE031100E9BF4B /* PersonsDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDaoRepository.swift; sourceTree = "<group>"; };
 		DCA76D042ADE033500E9BF4B /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		DCA76D062ADE034D00E9BF4B /* RegisterPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonViewModel.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 				DC5E0F1B2AE09D2B001B92B5 /* FMResultSet.h */,
 				DC5E0F132AE09D2B001B92B5 /* FMResultSet.m */,
 				DC5E0F122AE09D2B001B92B5 /* Persons App-Bridging-Header.h */,
-				DC5E0F232AE09D7D001B92B5 /* Guide.sqlite */,
+				DC25F0202AE1EC7D00FBEBFE /* guide.sqlite */,
 			);
 			path = "Persons App";
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			files = (
 				DCFDEE882ADB296A0070BD43 /* LaunchScreen.storyboard in Resources */,
 				DCFDEE852ADB296A0070BD43 /* Assets.xcassets in Resources */,
-				DC5E0F242AE09D7D001B92B5 /* Guide.sqlite in Resources */,
+				DC25F0212AE1EC7D00FBEBFE /* guide.sqlite in Resources */,
 				DCFDEE832ADB29690070BD43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

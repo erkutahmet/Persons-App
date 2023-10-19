@@ -14,6 +14,7 @@ class HomePageViewModel {
     var personsList = BehaviorSubject<[Persons]>(value: [Persons]())
     
     init() {
+        copyDatabase()
         self.personsList = pRepo.personsList
         reloadPersons()
     }
@@ -30,10 +31,10 @@ class HomePageViewModel {
         pRepo.reloadPersons()
     }
     
-    func copyDB() {
-        let bundlePath = Bundle.main.path(forResource: "Guide", ofType: ".sqlite")
+    func copyDatabase() {
+        let bundlePath = Bundle.main.path(forResource: "guide", ofType: ".sqlite")
         let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let placeToCopy = URL(fileURLWithPath: targetPath).appendingPathComponent("Guide.sqlite")
+        let placeToCopy = URL(fileURLWithPath: targetPath).appendingPathComponent("guide.sqlite")
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: placeToCopy.path) {
             print("It already have DataBase")
